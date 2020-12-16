@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\BlazorLazyLoading.Client.Users\BlazorLazyLoading.Client.Users.csproj" />
     <ProjectReference Include="..\Shared\BlazorLazyLoading.Shared.csproj" />
   </ItemGroup>
 

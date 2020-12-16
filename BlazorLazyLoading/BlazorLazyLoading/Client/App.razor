@@ -1,4 +1,6 @@
-<Router AppAssembly="@typeof(Program).Assembly">
+@using System.Reflection
+<Router AppAssembly="@typeof(Program).Assembly"
+        AdditionalAssemblies="@assemblies">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
     </Found>
@@ -8,3 +10,9 @@
         </LayoutView>
     </NotFound>
 </Router>
+@code {
+    private List<Assembly> assemblies = new List<Assembly>()
+    {
+        typeof(Users.UsersModule).Assembly
+    };
+}
